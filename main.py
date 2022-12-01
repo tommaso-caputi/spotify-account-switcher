@@ -7,6 +7,16 @@ load_dotenv()
 ACC1 = os.getenv("ACC1")
 PASS1 = os.getenv("PASS1")
 
+def get_actual_account():
+    file = open(os.getenv("ACTUAL_ACCOUNT_PATH"))
+    acc = file.read()
+    file.close() 
+    return acc
+
+def set_actual_account(acc):
+    file = open(os.getenv("ACTUAL_ACCOUNT_PATH"), "w")
+    file.write(acc)
+    file.close() 
 
 def open_spotify():
     os.startfile(os.getenv("SPOTIFY_PATH"))
@@ -28,8 +38,8 @@ def change_account(acc, passwd):
     pyautogui.write(passwd)
     pyautogui.moveTo(960, 550)  #position of access button
     pyautogui.click()
+    time.sleep(0.1)
+    set_actual_account(acc)
 
 if __name__ == "__main__":
-    open_spotify()
-    time.sleep(5)
-    #change_account(ACC1, PASS1)
+    pass
