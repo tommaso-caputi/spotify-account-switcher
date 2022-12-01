@@ -37,10 +37,14 @@ def set_actual_account(acc):
     app.destroy()
 
 def check_account(acc, passwd):
+    global app
     if acc != get_actual_account():
         os.startfile(os.getenv("SPOTIFY_PATH"))
         time.sleep(3)
         change_account(acc, passwd)
+    else:
+        os.startfile(os.getenv("SPOTIFY_PATH"))
+        app.destroy()
 
 def change_account(acc, passwd):
     time.sleep(0.3)
@@ -50,6 +54,7 @@ def change_account(acc, passwd):
     pyautogui.click()
     pyautogui.moveTo(960, 350)  #position of username
     pyautogui.click()
+    time.sleep(0.3)
     pyautogui.press('backspace', presses=30)
     time.sleep(0.5)
     pyautogui.write(acc)
