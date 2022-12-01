@@ -2,10 +2,15 @@ import pyautogui
 from dotenv import load_dotenv
 import os
 import time
+import tkinter
+import customtkinter
+
 
 load_dotenv()
 ACC1 = os.getenv("ACC1")
 PASS1 = os.getenv("PASS1")
+ACC2 = os.getenv("ACC2")
+PASS2 = os.getenv("PASS2")
 
 def get_actual_account():
     file = open(os.getenv("ACTUAL_ACCOUNT_PATH"))
@@ -41,5 +46,18 @@ def change_account(acc, passwd):
     time.sleep(0.1)
     set_actual_account(acc)
 
+def button_function():
+    print("button pressed")
+
 if __name__ == "__main__":
-    pass
+    customtkinter.set_appearance_mode("System")  
+    customtkinter.set_default_color_theme("blue")  
+    app = customtkinter.CTk()  
+    app.geometry("400x240")
+    app.title("Choose account")
+    app.eval("tk::PlaceWindow . center")
+    button = customtkinter.CTkButton(master=app, text=ACC1, command=button_function)
+    button.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+    button = customtkinter.CTkButton(master=app, text=ACC2, command=button_function)
+    button.place(relx=0.5, rely=0.2, anchor=tkinter.CENTER)
+    app.mainloop()
