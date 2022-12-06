@@ -19,3 +19,4 @@ ACCn is usefull for an account username
 PASSn is usefull for an account password
 
 ## License 
+[MIT](https://choosealicense.com/licenses/mit/)
