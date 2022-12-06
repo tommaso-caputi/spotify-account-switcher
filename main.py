@@ -2,7 +2,6 @@ import pyautogui
 from dotenv import load_dotenv
 import os
 import time
-import tkinter
 import customtkinter
 
 load_dotenv()
