@@ -5,5 +5,10 @@ Windows app for select spotify account on opening
 ```
 pip install pyautogui customtkinter
 ```
+## Setup
+1. Create .env file file like this:
+```
+
+```
 
 ## License 
