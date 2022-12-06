@@ -3,7 +3,7 @@ Windows app for select spotify account on opening
 
 ## Requirements
 ```
-pip install 
+pip install pyautogui customtkinter
 ```
 
 ## License 
