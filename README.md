@@ -2,6 +2,8 @@
 Windows app for select spotify account on opening
 
 ## Requirements
-<code>pip install </code>
+```
+pip install 
+```
 
 ## License 
