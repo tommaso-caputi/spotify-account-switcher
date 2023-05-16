@@ -1,4 +1,4 @@
-# spotify-account-switcher !!Deprecated!!
+# spotify-account-switcher :warning:Deprecated:warning:
 Windows app for select spotify account on opening
 
 ## Requirements
